@@ -1,0 +1,178 @@
+.slider-container {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #F6F8FA;
+    margin-top: 80px;
+  }
+  
+  h2 {
+    padding-top: 57px;
+  }
+  
+  .slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .arrow {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #C2C8CD; 
+    transition: color 0.3s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .arrow:hover {
+    color: #2A6CEA; 
+  }
+  
+  .slider-content {
+    display: flex;
+    overflow: hidden;
+    margin-top: 32px;
+    margin-bottom: 40px;
+    width: 70%;
+    height: 316px;
+    cursor: pointer;
+  }
+  
+  .text {
+    padding-top: 20px;
+  }
+  
+  .review-card {
+    flex: 1;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 15px 30px 0px #0000001A;
+    margin: 0 25px;
+    padding: 20px;
+    flex: 0 0 30%; 
+    text-align: center;
+  }
+  
+  .avatar {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .review-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .review-header h3 {
+    margin: 5px 0 0 0;
+  }
+  
+  .review-header p {
+    margin: 0;
+    color: gray;
+  }
+  
+  .arrow {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .left-arrow {
+    left: 200px;
+  }
+  
+  .right-arrow {
+    right: 200px;
+  }
+  
+  .dots {
+    margin-top: 20px;
+    margin-bottom: 45px;
+  }
+  
+  .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .dot.active,
+  .dot:hover {
+    background: #007bff;
+  }
+  
+  @media (max-width: 768px) {
+    .slider-content {
+      width: 90%;
+    }
+  
+    .review-card {
+      margin: 0 15px;
+      flex: 0 0 45%;
+    }
+  
+    .left-arrow {
+      left: 50px;
+    }
+  
+    .right-arrow {
+      right: 50px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .slider-content {
+      width: 100%;
+    }
+  
+    .review-card {
+      margin: 0 10px;
+      flex: 0 0 80%;
+    }
+  
+    .left-arrow {
+      left: 20px;
+    }
+  
+    .right-arrow {
+      right: 20px;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .slider-content {
+      width: 100%;
+    }
+  
+    .review-card {
+      margin: 0 5px;
+      flex: 0 0 90%;
+    }
+  
+    .left-arrow {
+      left: 10px;
+    }
+  
+    .right-arrow {
+      right: 10px;
+    }
+  }

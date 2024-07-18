@@ -1,0 +1,259 @@
+.container {
+    width: 100%;
+    max-width: 1216px;
+    margin: 0 auto;
+}
+
+.works_title {
+    padding-top: 80px;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 56px;
+    text-align: center;
+}
+
+.groap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 61px;
+}
+
+.curs {
+    width: 290px;
+    height: 164px;
+    margin: 0 20px;
+    display: flex;
+}
+
+.curs_title {
+    padding-top: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    color: #191C1F;
+}
+
+.curs_item {
+    padding-top: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #5E646A;
+}
+
+.curs_img {
+    width: 72px;
+    height: 72px;
+    background: url(../../assets/waiting.png) center no-repeat;
+}
+
+.curs_img1 {
+    width: 72px;
+    height: 72px;
+    background: url(../../assets/delivery-truck.png) center no-repeat;
+}
+
+.curs_img2 {
+    width: 72px;
+    height: 72px;
+    background: url(../../assets/secure.png) center no-repeat;
+}
+
+.curs_img3 {
+    width: 72px;
+    height: 72px;
+    background: url(../../assets/money-bags.png) center no-repeat;
+}
+
+.procent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 80px;
+
+}
+
+.procent_inner {
+    width: 592px;
+    height: 192px;
+}
+
+.procent_zog {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: left;
+    color: #191C1F;
+}
+
+.procent_title {
+    padding-top: 18px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    color: #5E646A;
+}
+
+.procent_item {
+    padding-top: 25px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    color: #5E646A;
+}
+
+.procent_foto {
+    width: 592px;
+    height: 448px;
+    position: relative;
+    background: url(../../assets/2_2.png) center no-repeat;
+}
+
+.procent_img {
+    width: 592px;
+    height: 448px;
+    transform: translate(0%, 0%);
+    background: url(../../assets/2_1.png) center no-repeat;
+}
+
+@media screen and (min-width:769px) {
+    .curs {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .groap {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .curs {
+        width: 80%;
+        margin: 10px 0;
+    }
+
+    .procent {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .procent_inner {
+        width: 90%;
+        height: auto;
+    }
+
+    .procent_foto {
+        width: 90%;
+        height: auto;
+        background-size: cover;
+    }
+
+    .procent_img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .works_title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .curs {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .curs_title {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .curs_item {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .procent_inner {
+        width: 100%;
+        height: auto;
+    }
+
+    .procent_zog {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .procent_title,
+    .procent_item {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .procent_foto {
+        width: 100%;
+        height: auto;
+        background-size: cover;
+    }
+
+    .procent_img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 320px) {
+    .works_title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .curs {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .curs_title {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .curs_item {
+        font-size: 10px;
+        line-height: 16px;
+    }
+
+    .procent_inner {
+        width: 100%;
+        height: auto;
+    }
+
+    .procent_zog {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .procent_title,
+    .procent_item {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .procent_foto {
+        width: 100%;
+        height: auto;
+        background-size: cover;
+    }
+
+    .procent_img {
+        width: 100%;
+        height: auto;
+    }
+}

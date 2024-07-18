@@ -1,0 +1,139 @@
+.conteiner {
+    width: 800px;
+    height: 258px;
+    margin: 80px auto;
+}
+
+.forma {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 56px;
+    text-align: center;
+    color: #191C1F;
+}
+
+.inputs1 {
+    margin-top: 44px;
+}
+
+.name {
+    width: 384px;
+    height: 64px;
+    padding: 16px;
+    gap: 0px;
+    border-radius: 4px;
+    border: 2px solid #F6F8FA;
+    background-color: #F6F8FA;
+    margin-right: 32px;
+    color: #5E646A;
+}
+
+.phone {
+    width: 384px;
+    height: 64px;
+    padding: 16px;
+    gap: 0px;
+    border-radius: 4px;
+    border: 2px solid #F6F8FA;
+    background-color: #F6F8FA;
+    color: #5E646A;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+} 
+
+.inputs2 {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+.chec {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    background: #FFFFFF;
+    margin-right: 16px;
+}
+
+.oke {
+    width: 344px;
+    height: 28px;
+    padding-top: 2px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #191C1F;
+}
+
+.btn10 {
+    width: 384px;
+    height: 64px;
+    border-radius: 4px;
+    padding: 20px 40px;
+    background-color: #2A6CEA;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+    border: 0;
+    margin-left: 30px;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .conteiner {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .inputs1 {
+        flex-direction: column;
+    }
+
+    .name, .phone {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .btn10 {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .forma {
+        font-size: 32px;
+        line-height: 48px;
+    }
+
+    .name, .phone {
+        height: 56px;
+        font-size: 16px;
+    }
+
+    .btn10 {
+        height: 56px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 320px) {
+    .forma {
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    .name, .phone {
+        height: 48px;
+        font-size: 14px;
+    }
+
+    .btn10 {
+        height: 48px;
+        font-size: 16px;
+    }
+}
