@@ -2,6 +2,7 @@
     width: 800px;
     height: 258px;
     margin: 80px auto;
+
 }
 
 .forma {
@@ -81,12 +82,20 @@
     margin-left: 30px;
     cursor: pointer;
 }
+
+.confirm_term {
+    display: flex;
+}
+
 @media (max-width: 768px) {
     .conteiner {
         width: 100%;
         padding: 0 20px;
+        height: auto;
     }
-
+    .inputs2 {
+        flex-direction: column;
+    }
     .inputs1 {
         flex-direction: column;
     }

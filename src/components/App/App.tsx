@@ -39,12 +39,12 @@ export const App: React.FC = () => {
         scrollToFuter={scrollToFuter}
       /> */}
       <Body ref={bodyRef} />
-      <div>
+      <section className="slider_section">
         <Slider ref={sliderRef} />
-      </div>
+      </section>
       <Accordion ref={accordionRef} />
       <Info />
-      {/* <Futer ref={futerRef} /> */}
+      <Futer ref={futerRef} />
       <Link />
     </div>
   );
