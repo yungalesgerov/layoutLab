@@ -86,7 +86,7 @@
     opacity: 1;
 }
 .intro {
-    margin: 250px auto;
+    margin: 165px auto;
     width: 748px;
     height: 334px;
 }
@@ -115,12 +115,14 @@
 .btn {
     text-decoration: none;
     background-color: #ECEFF2;
-    color: #191C1F;
+    color: #000000;
     padding: 20px;
     border-radius: 4px;
     font-size: 20px;
     font-weight: 600;
     line-height: 24px;
+    border: none;
+    /* font-weight: bold; */
 }
 
 .burger_menu {
@@ -246,7 +248,7 @@
     .intro {
         width: 90%;
         height: auto;
-        margin: 150px auto;
+        margin: 294px auto;
     }
 
     .intro_suptitle {

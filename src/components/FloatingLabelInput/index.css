@@ -1,18 +1,17 @@
 .input-container {
     position: relative;
-    margin: 20px;
-    width: 200px;
-  }
+    width: 100%;
+}
   
-  .input-label {
+.input-label {
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 10px;
     transform: translateY(-50%);
     transition: all 0.2s ease-out;
     color: #aaa;
     pointer-events: none;
-  }
+}
   
   .input-field {
     width: 100%;
@@ -22,6 +21,7 @@
     border-radius: 4px;
     font-size: 16px;
     transition: all 0.2s ease-out;
+    background-color:#F6F8FA;
   }
   
   .input-field:focus {
@@ -35,7 +35,6 @@
     color: #007BFF;
   }
   
-  /* Helper text styles */
   .helper-text {
     font-size: 12px;
     margin-top: 5px;
@@ -46,7 +45,6 @@
     color: #dc3545;
   }
   
-  /* Validation styles */
   .input-field.success {
     border-color: #28a745;
   }

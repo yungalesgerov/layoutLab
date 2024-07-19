@@ -1,5 +1,7 @@
 import React, { forwardRef } from "react";
 import "./Body.css";
+import svg1 from "../../assets/2_1.svg";
+import svg2 from "../../assets/2_2.svg";
 
 const Body = forwardRef<HTMLDivElement>((props, ref) => {
   return (
@@ -55,7 +57,7 @@ const Body = forwardRef<HTMLDivElement>((props, ref) => {
       <div className="procent">
         <div className="procent_wrapper">
           <div className="procent_inner">
-            <div className="procent_zog">Круто, ты дошел до третьего блока</div>
+            <h3>Круто, ты дошел до третьего блока</h3>
             <div className="procent_title">
               63% опрошенных пользовались кредитами из-за того, что не могли
               покрыть непредвиденные расходы свыше 15 000 ₽.
@@ -65,8 +67,9 @@ const Body = forwardRef<HTMLDivElement>((props, ref) => {
               экономить деньги на процентах и штрафах.
             </div>
           </div>
-          <div className="procent_foto">
-            <div className="procent_img"></div>
+          <div className="procent_wrapper_img">
+            <img src={svg2} alt="" className="img" />
+            <img src={svg1} alt="" className="img_hero img" />
           </div>
         </div>
       </div>

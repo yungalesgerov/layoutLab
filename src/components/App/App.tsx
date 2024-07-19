@@ -32,12 +32,12 @@ export const App: React.FC = () => {
 
   return (
     <div className="App">
-      {/* <Header
+      <Header
         scrollToBody={scrollToBody}
         scrollToSlider={scrollToSlider}
         scrollToAccordion={scrollToAccordion}
         scrollToFuter={scrollToFuter}
-      /> */}
+      />
       <Body ref={bodyRef} />
       <section className="slider_section">
         <Slider ref={sliderRef} />

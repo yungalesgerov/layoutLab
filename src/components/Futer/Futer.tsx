@@ -38,13 +38,13 @@ const Futer = forwardRef<HTMLDivElement>((props, ref) => {
       <form onSubmit={handleSubmit}>
         <div className="inputs1">
           <FloatingLabelInput
-            label="Label"
+            label="Имя"
             helperText="helperText"
             validate={validateInput}
             onChange={(e) => setName(e.target.value)}
           />
           <FloatingLabelInput
-            label="Label"
+            label="Телефон"
             helperText="helperText"
             validate={validateInput}
             onChange={(e) => setPhone(e.target.value)}
@@ -59,7 +59,7 @@ const Futer = forwardRef<HTMLDivElement>((props, ref) => {
               required
               onChange={(e) => setIsChecked(e.target.checked)}
             />
-            <div className="oke">Согласен на предоставление данных</div>
+            <div className="oke">Согласен, отказываюсь</div>
           </div>
           <button className="btn10" type="submit">
             Отправить

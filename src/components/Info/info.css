@@ -1,8 +1,11 @@
 .container1 {
-    width: 100%;
+    width: 90%;
     max-width: 1216px;
     margin: 0 auto;
     padding-top: 68px;
+    display: flex;
+    gap: 37px;
+    flex-direction: column;
 }
 
 .fon {
@@ -11,21 +14,13 @@
 
 .text_item1, .text_item2 {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.text_item2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+    gap: 32px;
 }
 
 .col {
     width: 592px;
-    height: 245px;
+    height: auto;
+    min-height: 245px;
 }
 
 .text1 {
@@ -45,15 +40,14 @@
     color: #191C1F;
 }
 
-.text_item2 {
-    padding-top: 37px;
-    padding-bottom: 67px;
-}
-
 @media (max-width: 768px) {
     .col {
         width: 100%;
         height: auto;
+    }
+
+    .text_item1, .text_item2 {
+        flex-direction: column;
     }
 }
 
