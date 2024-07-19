@@ -50,6 +50,7 @@
     display: flex;
     margin-top: 30px;
     margin-bottom: 80px;
+    justify-content: space-between;
 }
 
 .chec {
@@ -71,10 +72,9 @@
 }
 
 .btn10 {
-    width: 384px;
+    width: 49%;
     height: 64px;
     border-radius: 4px;
-    padding: 20px 40px;
     background-color: #2A6CEA;
     font-size: 20px;
     font-weight: 600;
@@ -82,12 +82,17 @@
     text-align: center;
     color: #FFFFFF;
     border: 0;
-    margin-left: 30px;
     cursor: pointer;
+}
+
+.btn10:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease-out;
 }
 
 .confirm_term {
     display: flex;
+    width: 49%;
 }
 
 
@@ -110,7 +115,9 @@
         margin-right: 0;
         margin-bottom: 20px;
     }
-
+    .confirm_term {
+        width: 100%;
+    }
     .btn10 {
         width: 100%;
         margin-left: 0;

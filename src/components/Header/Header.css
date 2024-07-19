@@ -122,9 +122,11 @@
     font-weight: 600;
     line-height: 24px;
     border: none;
-    /* font-weight: bold; */
 }
-
+.btn:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease-out;
+}
 .burger_menu {
     cursor: pointer;
     width: 22px;

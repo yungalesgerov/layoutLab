@@ -1,47 +1,8 @@
 import React, { useState, useRef, useEffect, forwardRef } from "react";
 import "./Accordion.css";
+import { AccordionItem } from "./AccordionItem";
 
-interface AccordionItemProps {
-  title: string;
-  content: string;
-}
-
-const AccordionItem: React.FC<AccordionItemProps> = ({ title, content }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const contentRef = useRef<HTMLDivElement>(null);
-
-  const toggleAccordion = () => {
-    setIsOpen(!isOpen);
-  };
-
-  useEffect(() => {
-    if (contentRef.current) {
-      contentRef.current.style.maxHeight = isOpen
-        ? `${contentRef.current.scrollHeight}px`
-        : "0px";
-    }
-  }, [isOpen]);
-
-  return (
-    <div className="accordion-item">
-      <button
-        className={`accordion-button ${isOpen ? "active" : ""}`}
-        onClick={toggleAccordion}
-      >
-        {title}
-        <span className={`icon ${isOpen ? "open" : ""}`}>+</span>
-      </button>
-      <div
-        ref={contentRef}
-        className={`accordion-content ${isOpen ? "open" : ""}`}
-      >
-        <p>{content}</p>
-      </div>
-    </div>
-  );
-};
-
-const Accordion = forwardRef<HTMLDivElement>((props, ref) => {
+export const Accordion = forwardRef<HTMLDivElement>((props, ref) => {
   const items = [
     {
       title:
@@ -84,21 +45,19 @@ const Accordion = forwardRef<HTMLDivElement>((props, ref) => {
   ];
 
   return (
-    // <div ref={ref} className='container'>
-    <div className="accordion">
-      <h1>Вопросы и ответы</h1>
-      <div className="accordion_wrapper">
-        {items.map((item, index) => (
-          <AccordionItem
-            key={index}
-            title={item.title}
-            content={item.content}
-          />
-        ))}
+    <div ref={ref} className="container">
+      <div className="accordion">
+        <h1>Вопросы и ответы</h1>
+        <div className="accordion_wrapper">
+          {items.map((item, index) => (
+            <AccordionItem
+              key={index}
+              title={item.title}
+              content={item.content}
+            />
+          ))}
+        </div>
       </div>
     </div>
-    // </div>
   );
 });
-
-export default Accordion;

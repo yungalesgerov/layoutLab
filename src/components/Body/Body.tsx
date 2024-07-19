@@ -2,56 +2,48 @@ import React, { forwardRef } from "react";
 import "./Body.css";
 import svg1 from "../../assets/2_1.svg";
 import svg2 from "../../assets/2_2.svg";
+import { Curs } from "./BodyCurs";
 
-const Body = forwardRef<HTMLDivElement>((props, ref) => {
+const cursData = [
+  {
+    imgClass: "curs_img",
+    title: "Прочитай задание внимательно",
+    description: "Думаю у тебя не займет это больше двух-трех минут",
+  },
+  {
+    imgClass: "curs_img1",
+    title: "Изучи весь макет заранее",
+    description:
+      "Подумай как это будет работать на разных разрешениях и при скролле",
+  },
+  {
+    imgClass: "curs_img2",
+    title: "Сделай хорошо",
+    description: "Чтобы мы могли тебе доверить подобные задачи в будущем",
+  },
+  {
+    imgClass: "curs_img3",
+    title: "Получи предложение",
+    description:
+      "Ну тут все просто, не я придумал правила, но думаю так и будет)))",
+  },
+];
+
+export const Body = forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <div ref={ref} className="container">
       <div className="works">
         <div className="works_title">Как это работает</div>
         <div className="groap">
-          <div className="wrapper_position">
-            <div className="curs">
-              <div className="curs_img curs_img"></div>
-              <div>
-                <div className="curs_title">Прочитай задание внимательно</div>
-                <div className="curs_item">
-                  Думаю у тебя не займет это больше двух-трех минут
-                </div>
-              </div>
+          {cursData.map((curs, index) => (
+            <div className="wrapper_position" key={index}>
+              <Curs
+                imgClass={curs.imgClass}
+                title={curs.title}
+                description={curs.description}
+              />
             </div>
-            <div className="curs">
-              <div className="curs_img1 curs_img"></div>
-              <div>
-                <div className="curs_title">Изучи весь макет заранее</div>
-                <div className="curs_item">
-                  Подумай как это будет работать на разных разрешениях и при
-                  скролле
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="wrapper_position">
-            <div className="curs">
-              <div className="curs_img2 curs_img"></div>
-              <div>
-                <div className="curs_title">Сделай хорошо</div>
-                <div className="curs_item">
-                  Чтобы мы могли тебе доверить подобные задачи в будущем
-                </div>
-              </div>
-            </div>
-            <div className="curs">
-              <div className="curs_img3 curs_img"></div>
-              <div>
-                <div className="curs_title">Получи предложение</div>
-                <div className="curs_item">
-                  {
-                    "Ну тут все просто, не я придумал правила, но думаю так и будет)))"
-                  }
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
       <div className="procent">
@@ -77,4 +69,3 @@ const Body = forwardRef<HTMLDivElement>((props, ref) => {
   );
 });
 
-export default Body;

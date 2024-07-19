@@ -1,12 +1,14 @@
 import React, { useRef } from "react";
 import "./App.css";
-import Header from "../Header/Header";
-import Body from "../Body/Body";
-import Slider from "../Slider/Slider";
-import Accordion from "../Accordion/Accordion";
-import Info from "../Info/Info";
-import Futer from "../Futer/Futer";
-import Link from "../Link/Link";
+import {
+  Header,
+  Body,
+  Slider,
+  Accordion,
+  Info,
+  Futer,
+  Link,
+} from "../components";
 
 export const App: React.FC = () => {
   const bodyRef = useRef<HTMLDivElement>(null);
@@ -49,5 +51,3 @@ export const App: React.FC = () => {
     </div>
   );
 };
-
-export default App;

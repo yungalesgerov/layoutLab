@@ -2,7 +2,8 @@ import React, { useState, forwardRef } from "react";
 import axios from "axios";
 import "./Futer.css";
 import { FloatingLabelInput } from "../FloatingLabelInput";
-const Futer = forwardRef<HTMLDivElement>((props, ref) => {
+
+export const Futer = forwardRef<HTMLDivElement>((props, ref) => {
   const [name, setName] = useState<string>("");
   const [phone, setPhone] = useState<string>("");
   const [isChecked, setIsChecked] = useState<boolean>(false);
@@ -70,4 +71,3 @@ const Futer = forwardRef<HTMLDivElement>((props, ref) => {
   );
 });
 
-export default Futer;

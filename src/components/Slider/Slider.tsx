@@ -3,8 +3,10 @@ import "./Slider.css";
 import myPhoto from "../../assets/Ellipse.png";
 import myPhoto1 from "../../assets/Ellipse 1.png";
 import myPhoto2 from "../../assets/Ellipse 3.png";
+import { SliderDots } from "./SliderDots";
+import { SliderReviewCard } from "./SliderReviewCard";
 
-interface Review {
+export interface Review {
   id: number;
   name: string;
   location: string;
@@ -78,7 +80,7 @@ const reviews: Review[] = [
   },
 ];
 
-const Slider = forwardRef<HTMLDivElement>((props, ref) => {
+export const Slider = forwardRef<HTMLDivElement>((props, ref) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slidesToShow, setSlidesToShow] = useState(3);
 
@@ -130,37 +132,18 @@ const Slider = forwardRef<HTMLDivElement>((props, ref) => {
               currentIndex * slidesToShow + slidesToShow
             )
             .map((review) => (
-              <div key={review.id} className="review-card">
-                <div className="review-header">
-                  <img
-                    src={review.avatar}
-                    alt={review.name}
-                    className="avatar"
-                  />
-                  <h3 className="review_name">{review.name}</h3>
-                  <p>{review.location}</p>
-                </div>
-                <p className="text">{review.text}</p>
-              </div>
+              <SliderReviewCard key={review.id} review={review} />
             ))}
         </div>
         <button className="arrow right-arrow" onClick={nextSlide}>
           &gt;
         </button>
       </div>
-      <div className="dots">
-        {Array.from({ length: Math.ceil(reviews.length / slidesToShow) }).map(
-          (_, index) => (
-            <span
-              key={index}
-              className={`dot ${index === currentIndex ? "active" : ""}`}
-              onClick={() => goToSlide(index)}
-            ></span>
-          )
-        )}
-      </div>
+      <SliderDots
+        numOfDots={Math.ceil(reviews.length / slidesToShow)}
+        currentIndex={currentIndex}
+        goToSlide={goToSlide}
+      />
     </div>
   );
 });
-
-export default Slider;

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Header.css";
-import vector from "../../assets/Vector.svg";
+import { NavLink } from "./NavLink";
+import { HeaderModal } from "./HeaderModal";
 
 interface HeaderProps {
   scrollToBody: () => void;
@@ -30,18 +31,10 @@ export const Header: React.FC<HeaderProps> = ({
             testLab
           </div>
           <nav className="nav">
-            <a className="nav_link" onClick={scrollToBody}>
-              Как это работает
-            </a>
-            <a className="nav_link" onClick={scrollToSlider}>
-              3-й блок
-            </a>
-            <a className="nav_link" onClick={scrollToAccordion}>
-              Вопросы и ответы
-            </a>
-            <a className="nav_link" onClick={scrollToFuter}>
-              Форма
-            </a>
+            <NavLink onClick={scrollToBody}>Как это работает</NavLink>
+            <NavLink onClick={scrollToSlider}>3-й блок</NavLink>
+            <NavLink onClick={scrollToAccordion}>Вопросы и ответы</NavLink>
+            <NavLink onClick={scrollToFuter}>Форма</NavLink>
           </nav>
           <div className="burger_menu" onClick={toggleModal}>
             <span
@@ -66,42 +59,14 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
         </div>
       </div>
-      {isModalOpen && (
-        <div className="modal">
-          <div className="modal_content">
-            <div className="modal_header">
-              <div className="modal_logo">
-                <div className="cor_uno"></div>
-                <div className="cor_two"></div>
-                testLab
-              </div>
-              <button className="close_button" onClick={toggleModal}>
-                &times;
-              </button>
-            </div>
-            <ul className="modal_nav">
-              <li className="nav_item" onClick={scrollToBody}>
-                Как это работает
-                <img src={vector} alt="" />
-              </li>
-              <li className="nav_item" onClick={scrollToSlider}>
-                3-й блок
-                <img src={vector} alt="" />
-              </li>
-              <li className="nav_item" onClick={scrollToAccordion}>
-                Вопросы и ответы
-                <img src={vector} alt="" />
-              </li>
-              <li className="nav_item" onClick={scrollToFuter}>
-                Форма
-                <img src={vector} alt="" />
-              </li>
-            </ul>
-          </div>
-        </div>
-      )}
+      <HeaderModal
+        isModalOpen={isModalOpen}
+        toggleModal={toggleModal}
+        scrollToBody={scrollToBody}
+        scrollToSlider={scrollToSlider}
+        scrollToAccordion={scrollToAccordion}
+        scrollToFuter={scrollToFuter}
+      />
     </header>
   );
 };
-
-export default Header;
