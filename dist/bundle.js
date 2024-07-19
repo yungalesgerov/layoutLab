@@ -128,6 +128,62 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/assets/delivery-truck.png":
+/*!***************************************!*\
+  !*** ./src/assets/delivery-truck.png ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("assets/images/delivery-truck.12be23b0.png");
+
+/***/ }),
+
+/***/ "./src/assets/money-bags.png":
+/*!***********************************!*\
+  !*** ./src/assets/money-bags.png ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("assets/images/money-bags.271ae7f7.png");
+
+/***/ }),
+
+/***/ "./src/assets/secure.png":
+/*!*******************************!*\
+  !*** ./src/assets/secure.png ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("assets/images/secure.0d010db3.png");
+
+/***/ }),
+
+/***/ "./src/assets/waiting.png":
+/*!********************************!*\
+  !*** ./src/assets/waiting.png ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("assets/images/waiting.1c882f17.png");
+
+/***/ }),
+
 /***/ "./src/App.css":
 /*!*********************!*\
   !*** ./src/App.css ***!
@@ -33766,26 +33822,34 @@ __webpack_require__(/*! ./AdviceContent.css */ "./src/components/AdviceContent/A
 var _2_1_svg_1 = __importDefault(__webpack_require__(/*! ../../assets/2_1.svg */ "./src/assets/2_1.svg"));
 var _2_2_svg_1 = __importDefault(__webpack_require__(/*! ../../assets/2_2.svg */ "./src/assets/2_2.svg"));
 var DoItem_tsx_1 = __webpack_require__(/*! ./DoItem.tsx */ "./src/components/AdviceContent/DoItem.tsx/index.ts");
+var waiting_png_1 = __importDefault(__webpack_require__(/*! ../../assets/waiting.png */ "./src/assets/waiting.png"));
+var delivery_truck_png_1 = __importDefault(__webpack_require__(/*! ../../assets/delivery-truck.png */ "./src/assets/delivery-truck.png"));
+var secure_png_1 = __importDefault(__webpack_require__(/*! ../../assets/secure.png */ "./src/assets/secure.png"));
+var money_bags_png_1 = __importDefault(__webpack_require__(/*! ../../assets/money-bags.png */ "./src/assets/money-bags.png"));
 var doList = [
     {
         imgClass: "curs_img",
         title: "Прочитай задание внимательно",
         description: "Думаю у тебя не займет это больше двух-трех минут",
+        img: waiting_png_1.default,
     },
     {
         imgClass: "curs_img1",
         title: "Изучи весь макет заранее",
         description: "Подумай как это будет работать на разных разрешениях и при скролле",
+        img: delivery_truck_png_1.default,
     },
     {
         imgClass: "curs_img2",
         title: "Сделай хорошо",
         description: "Чтобы мы могли тебе доверить подобные задачи в будущем",
+        img: secure_png_1.default,
     },
     {
         imgClass: "curs_img3",
         title: "Получи предложение",
         description: "Ну тут все просто, не я придумал правила, но думаю так и будет)))",
+        img: money_bags_png_1.default,
     },
 ];
 exports.AdviceContent = (0, react_1.forwardRef)(function (props, ref) {
@@ -33793,7 +33857,7 @@ exports.AdviceContent = (0, react_1.forwardRef)(function (props, ref) {
         react_1.default.createElement("div", { className: "works" },
             react_1.default.createElement("div", { className: "works_title" }, "\u041A\u0430\u043A \u044D\u0442\u043E \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u0442"),
             react_1.default.createElement("div", { className: "groap" }, doList.map(function (curs, index) { return (react_1.default.createElement("div", { className: "wrapper_position", key: index },
-                react_1.default.createElement(DoItem_tsx_1.DoItem, { imgClass: curs.imgClass, title: curs.title, description: curs.description }))); }))),
+                react_1.default.createElement(DoItem_tsx_1.DoItem, { img: curs.img, title: curs.title, description: curs.description }))); }))),
         react_1.default.createElement("div", { className: "procent" },
             react_1.default.createElement("div", { className: "procent_wrapper" },
                 react_1.default.createElement("div", { className: "procent_inner" },
@@ -33822,9 +33886,9 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.DoItem = void 0;
 var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 var DoItem = function (_a) {
-    var imgClass = _a.imgClass, title = _a.title, description = _a.description;
+    var title = _a.title, description = _a.description, img = _a.img;
     return (react_1.default.createElement("div", { className: "curs" },
-        react_1.default.createElement("div", { className: "".concat(imgClass, " curs_img") }),
+        react_1.default.createElement("img", { className: "curs_img", src: img, alt: "" }),
         react_1.default.createElement("div", null,
             react_1.default.createElement("div", { className: "curs_title" }, title),
             react_1.default.createElement("div", { className: "curs_item" }, description))));

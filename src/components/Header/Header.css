@@ -227,10 +227,6 @@
         align-items: flex-start;
     }
 
-    .header {
-        height: 1024px;
-    }
-
     .nav {
         display: flex;
         flex-direction: column;
