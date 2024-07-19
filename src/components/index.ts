@@ -1,8 +1,8 @@
-export { Accordion } from './Accordion/Accordion';
-export { Body } from './Body';
+export { FAQSection } from './FAQSection/FAQSection';
+export { AdviceContent } from './AdviceContent';
 export { FloatingLabelInput } from './FloatingLabelInput';
-export { Futer } from './Futer/Futer';
+export { FormSection } from './FormSection/FormSection';
 export { Header } from './Header/Header';
-export { Info } from './Info/Info';
-export { Link } from './Link/Link';
-export { Slider } from './Slider/Slider';
+export { CommentsBlog } from './CommentsBlog/CommentsBlog';
+export { Footer } from './Footer/Footer';
+export { SliderReview } from './SliderReview/SliderReview';

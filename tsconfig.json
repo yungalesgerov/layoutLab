@@ -1,26 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "target": "es5",                // Задайте версию JavaScript, на которую будет транслироваться ваш код
+    "module": "commonjs",           // Укажите систему модулей
+    "jsx": "react",                 // Укажите, что вы используете JSX синтаксис
+    "esModuleInterop": true,        // Позволяет использовать CommonJS модули с синтаксисом ES6
+    "moduleResolution": "node",     // Поддержка разрешения модулей как в Node.js
+    "strict": true,                 // Включение всех строгих проверок
+    "skipLibCheck": true,           // Пропуск проверки библиотек
+    "forceConsistentCasingInFileNames": true
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src/**/*.ts", "src/**/*.tsx"], // Укажите пути к вашим исходным файлам
+  "exclude": ["node_modules"]
 }

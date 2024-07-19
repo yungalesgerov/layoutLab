@@ -1,21 +1,22 @@
 import vector from "../../../assets/Vector.svg";
+import React from "react";
 
 interface HeaderModalProps {
   isModalOpen: boolean;
   toggleModal: () => void;
-  scrollToBody: () => void;
-  scrollToSlider: () => void;
-  scrollToAccordion: () => void;
-  scrollToFuter: () => void;
+  scrollToAdviceContent: () => void;
+  scrollToSliderReview: () => void;
+  scrollToFAQSection: () => void;
+  scrollToFormSection: () => void;
 }
 
 export const HeaderModal: React.FC<HeaderModalProps> = ({
   isModalOpen,
   toggleModal,
-  scrollToBody,
-  scrollToSlider,
-  scrollToAccordion,
-  scrollToFuter,
+  scrollToAdviceContent,
+  scrollToSliderReview,
+  scrollToFAQSection,
+  scrollToFormSection,
 }) => {
   return isModalOpen ? (
     <div className="modal">
@@ -31,19 +32,19 @@ export const HeaderModal: React.FC<HeaderModalProps> = ({
           </button>
         </div>
         <ul className="modal_nav">
-          <li className="nav_item" onClick={scrollToBody}>
+          <li className="nav_item" onClick={scrollToAdviceContent}>
             Как это работает
             <img src={vector} alt="" />
           </li>
-          <li className="nav_item" onClick={scrollToSlider}>
+          <li className="nav_item" onClick={scrollToSliderReview}>
             3-й блок
             <img src={vector} alt="" />
           </li>
-          <li className="nav_item" onClick={scrollToAccordion}>
+          <li className="nav_item" onClick={scrollToFAQSection}>
             Вопросы и ответы
             <img src={vector} alt="" />
           </li>
-          <li className="nav_item" onClick={scrollToFuter}>
+          <li className="nav_item" onClick={scrollToFormSection}>
             Форма
             <img src={vector} alt="" />
           </li>

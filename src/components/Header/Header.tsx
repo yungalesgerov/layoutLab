@@ -3,26 +3,49 @@ import "./Header.css";
 import { NavLink } from "./NavLink";
 import { HeaderModal } from "./HeaderModal";
 
+import backgroundImage from "../../assets/back1.png";
+
 interface HeaderProps {
-  scrollToBody: () => void;
-  scrollToSlider: () => void;
-  scrollToAccordion: () => void;
-  scrollToFuter: () => void;
+  adviceRef: React.RefObject<HTMLDivElement>;
+  sliderRef: React.RefObject<HTMLDivElement>;
+  faqRef: React.RefObject<HTMLDivElement>;
+  formRef: React.RefObject<HTMLDivElement>;
 }
 
 export const Header: React.FC<HeaderProps> = ({
-  scrollToBody,
-  scrollToSlider,
-  scrollToAccordion,
-  scrollToFuter,
+  adviceRef,
+  sliderRef,
+  faqRef,
+  formRef,
 }) => {
+  const scrollToAdviceContent = () => {
+    adviceRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToSliderReview = () => {
+    sliderRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToFAQSection = () => {
+    faqRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToFormSection = () => {
+    formRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
   };
 
   return (
-    <header className="header">
+    <header
+      className="header"
+      style={{
+        background: `linear-gradient(rgba(15, 78, 196, 0.7), rgba(15, 78, 196, 0.7)), url(${backgroundImage}) center no-repeat`,
+      }}
+    >
       <div className="container">
         <div className="header_inner">
           <div className="header_logo">
@@ -31,10 +54,10 @@ export const Header: React.FC<HeaderProps> = ({
             testLab
           </div>
           <nav className="nav">
-            <NavLink onClick={scrollToBody}>Как это работает</NavLink>
-            <NavLink onClick={scrollToSlider}>3-й блок</NavLink>
-            <NavLink onClick={scrollToAccordion}>Вопросы и ответы</NavLink>
-            <NavLink onClick={scrollToFuter}>Форма</NavLink>
+            <NavLink onClick={scrollToAdviceContent}>Как это работает</NavLink>
+            <NavLink onClick={scrollToSliderReview}>3-й блок</NavLink>
+            <NavLink onClick={scrollToFAQSection}>Вопросы и ответы</NavLink>
+            <NavLink onClick={scrollToFormSection}>Форма</NavLink>
           </nav>
           <div className="burger_menu" onClick={toggleModal}>
             <span
@@ -53,7 +76,7 @@ export const Header: React.FC<HeaderProps> = ({
             Сделай круто тестовое задание и у тебя получится
           </div>
           <div className="intro_btn">
-            <button className="btn" onClick={scrollToAccordion}>
+            <button className="btn" onClick={scrollToFAQSection}>
               Проще простого!
             </button>
           </div>
@@ -62,10 +85,10 @@ export const Header: React.FC<HeaderProps> = ({
       <HeaderModal
         isModalOpen={isModalOpen}
         toggleModal={toggleModal}
-        scrollToBody={scrollToBody}
-        scrollToSlider={scrollToSlider}
-        scrollToAccordion={scrollToAccordion}
-        scrollToFuter={scrollToFuter}
+        scrollToAdviceContent={scrollToAdviceContent}
+        scrollToSliderReview={scrollToSliderReview}
+        scrollToFAQSection={scrollToFAQSection}
+        scrollToFormSection={scrollToFormSection}
       />
     </header>
   );

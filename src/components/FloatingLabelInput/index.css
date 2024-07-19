@@ -1,62 +1,82 @@
 .input-container {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
 }
-  
+
 .input-label {
-    position: absolute;
-    top: 35%;
-    left: 10px;
-    transform: translateY(-50%);
-    transition: all 0.2s ease-out;
-    color: #aaa;
-    pointer-events: none;
+  position: absolute;
+  top: 35%;
+  left: 10px;
+  transform: translateY(-50%);
+  transition: all 0.2s ease-out;
+  color: #aaa;
+  pointer-events: none;
 }
-  
-  .input-field {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    transition: all 0.2s ease-out;
-    background-color:#F6F8FA;
-  }
-  
-  .input-field:focus {
-    border-color: #007BFF;
-  }
-  
-  .input-field:not(:placeholder-shown) + .input-label,
-  .input-field:focus + .input-label {
-    top: -10px;
-    font-size: 12px;
-    color: #007BFF;
-  }
-  
-  .helper-text {
-    font-size: 12px;
-    margin-top: 5px;
-    color: #aaa;
-  }
-  
-  .helper-text.error {
-    color: #dc3545;
-  }
-  
-  .input-field.success {
-    border-color: #28a745;
-  }
-  
-  .input-field.error {
-    border-color: #dc3545;
-  }
-  
-  .input-field.success + .input-label {
-    color: #28a745;
-  }
-  
-  .input-field.error + .input-label {
-    color: #dc3545;
-  }
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: all 0.2s ease-out;
+  background-color:#F6F8FA;
+}
+
+.input-field:focus {
+  border-color: #007BFF;
+}
+
+.input-field:not(:placeholder-shown) + .input-label,
+.input-field:focus + .input-label {
+  top: -10px;
+  font-size: 12px;
+  color: #007BFF;
+}
+
+.helper-text {
+  font-size: 12px;
+  margin-top: 5px;
+  color: #aaa;
+}
+
+.helper-text.error {
+  color: #dc3545;
+}
+
+.input-field.success {
+  border-color: #28a745;
+}
+
+.input-field.error {
+  border-color: #dc3545;
+}
+
+.input-field.success + .input-label {
+  color: #28a745;
+}
+
+.input-field.error + .input-label {
+  color: #dc3545;
+}
+.validation-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+}
+
+.success-icon {
+  color: #28a745;
+}
+
+.error-icon {
+  color: #dc3545;
+}
+.valid {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 20px;
+}
